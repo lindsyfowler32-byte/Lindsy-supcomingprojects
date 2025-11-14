@@ -1,2 +1,3 @@
-# Lindsy-supcomingprojects
-Up coming projects
+SQL Project "Coming Soon"
+Capstone Project "Coming Soon"
+Excel Project "Coming Soon"
