@@ -1,0 +1,14 @@
+SELECT
+  CoC_Name,
+  SUM(Overall_Homeless) AS total_overall_homeless,
+  SUM(Unsheltered_Homeless) AS total_unsheltered_homeless
+FROM
+  `lindsy-fowler-new-project.Exploration_Project.homelessness`
+WHERE 
+  Count_Year = 2018
+GROUP BY
+  CoC_Name
+HAVING
+  SUM(Overall_Homeless) > 1000
+  AND SUM(Unsheltered_Homeless) < 100
+  AND (SUM(Unsheltered_Homeless) * 1.0 / SUM(Overall_Homeless)) < 0.02;
